@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3da15a1a216b09fc83abdd49f6527c5d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3da15a1a216b09fc83abdd49f6527c5d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3da15a1a216b09fc83abdd49f6527c5d = L.map(
+                "map_3da15a1a216b09fc83abdd49f6527c5d",
+                {
+                    center: [31.0, -99.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_089b7bc83eef752da4369fa23ff9426c = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3da15a1a216b09fc83abdd49f6527c5d);
+        
+    
+            var marker_cluster_4c79149f0667f220e1f02d542106e5eb = L.markerClusterGroup(
+                {}
+            );
+            map_3da15a1a216b09fc83abdd49f6527c5d.addLayer(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var marker_4a74f0a6163401e0de98eab5aa0a103b = L.marker(
+                [28.344346, -99.099162],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_8c0d81c2841c42cfc788108ece79ddb6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4a74f0a6163401e0de98eab5aa0a103b.setIcon(icon_8c0d81c2841c42cfc788108ece79ddb6);
+        
+    
+        var popup_2410b9bcdd961d103ceb5481a0b61a5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_169d8d7402838b47c3350aa0b6af6f7f = $(`<div id="html_169d8d7402838b47c3350aa0b6af6f7f" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Duckboard B-2H<br>     <b>Operator:</b> Ep Energy E&p Company, Llc<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 8350<br>     <b>API:</b> 28337537     </div>`)[0];
+            popup_2410b9bcdd961d103ceb5481a0b61a5a.setContent(html_169d8d7402838b47c3350aa0b6af6f7f);
+        
+
+        marker_4a74f0a6163401e0de98eab5aa0a103b.bindPopup(popup_2410b9bcdd961d103ceb5481a0b61a5a)
+        ;
+
+        
+    
+    
+            var marker_97ff658790a100e2208a17232fe9a793 = L.marker(
+                [32.549122, -94.369126],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_c30b448c229533fc8efdd1a2160d12bf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_97ff658790a100e2208a17232fe9a793.setIcon(icon_c30b448c229533fc8efdd1a2160d12bf);
+        
+    
+        var popup_7130bf856b36771f513106560324197b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c73690377c1f374ba4cb7f7d81a1c819 = $(`<div id="html_c73690377c1f374ba4cb7f7d81a1c819" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Jernigan-woolworth Hv Unit A-1H<br>     <b>Operator:</b> Tgnr East Texas Ii Llc<br>     <b>Basin:</b> East Texas Basin<br>     <b>Formation:</b> Haynesville Shale<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 20335695     </div>`)[0];
+            popup_7130bf856b36771f513106560324197b.setContent(html_c73690377c1f374ba4cb7f7d81a1c819);
+        
+
+        marker_97ff658790a100e2208a17232fe9a793.bindPopup(popup_7130bf856b36771f513106560324197b)
+        ;
+
+        
+    
+    
+            var marker_520992c2f0a8fc35320369a14dc864f3 = L.marker(
+                [32.107118, -94.761187],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_b000e3a477409f2bd5a7534ae5c98e39 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_520992c2f0a8fc35320369a14dc864f3.setIcon(icon_b000e3a477409f2bd5a7534ae5c98e39);
+        
+    
+        var popup_0555eba4778cc0b2a3cda5d351b6ccdc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_81806b0dee5dbc5311377ca8d80ffa05 = $(`<div id="html_81806b0dee5dbc5311377ca8d80ffa05" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Hubbard, Frank-4<br>     <b>Operator:</b> Buffco Production Inc.<br>     <b>Basin:</b> East Texas Basin<br>     <b>Formation:</b> Travis Peak Cons.<br>     <b>Depth (ft):</b> 11209<br>     <b>API:</b> 40134309     </div>`)[0];
+            popup_0555eba4778cc0b2a3cda5d351b6ccdc.setContent(html_81806b0dee5dbc5311377ca8d80ffa05);
+        
+
+        marker_520992c2f0a8fc35320369a14dc864f3.bindPopup(popup_0555eba4778cc0b2a3cda5d351b6ccdc)
+        ;
+
+        
+    
+    
+            var marker_2e430ae056a2c12dd65c77db07419ae0 = L.marker(
+                [31.323152, -103.69123],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_bfc9e809a850e77be528d4912cf780a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2e430ae056a2c12dd65c77db07419ae0.setIcon(icon_bfc9e809a850e77be528d4912cf780a0);
+        
+    
+        var popup_a8fa635838cdd0bf566055f113370ebb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f7fe01b3b819d8e845455dd1145c812 = $(`<div id="html_8f7fe01b3b819d8e845455dd1145c812" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> State Champ 56-t3-12x5-W205H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 12776<br>     <b>API:</b> 38941348     </div>`)[0];
+            popup_a8fa635838cdd0bf566055f113370ebb.setContent(html_8f7fe01b3b819d8e845455dd1145c812);
+        
+
+        marker_2e430ae056a2c12dd65c77db07419ae0.bindPopup(popup_a8fa635838cdd0bf566055f113370ebb)
+        ;
+
+        
+    
+    
+            var marker_133b8dd339db197f78cd782953e2d340 = L.marker(
+                [31.869133, -102.03119],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_662c6cd0e7d2b0f4e2f6c6a6dc7f6204 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_133b8dd339db197f78cd782953e2d340.setIcon(icon_662c6cd0e7d2b0f4e2f6c6a6dc7f6204);
+        
+    
+        var popup_87786ac3b8e437e4e03d00585ff8f907 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ccdcabac0b177e398663e3753290c9c = $(`<div id="html_4ccdcabac0b177e398663e3753290c9c" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Scharbauer, C. 'a'-4192US<br>     <b>Operator:</b> Chevron U. S. A. Inc.<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Consolidated<br>     <b>Depth (ft):</b> 11500<br>     <b>API:</b> 32947764     </div>`)[0];
+            popup_87786ac3b8e437e4e03d00585ff8f907.setContent(html_4ccdcabac0b177e398663e3753290c9c);
+        
+
+        marker_133b8dd339db197f78cd782953e2d340.bindPopup(popup_87786ac3b8e437e4e03d00585ff8f907)
+        ;
+
+        
+    
+    
+            var marker_8816f4013bc326f23cf8235c3e5221b0 = L.marker(
+                [31.368733, -102.04191],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_3b8bfdb1b940fdfcb5ec36e43ef14de0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_8816f4013bc326f23cf8235c3e5221b0.setIcon(icon_3b8bfdb1b940fdfcb5ec36e43ef14de0);
+        
+    
+        var popup_55d15efc2dd4ce33306805bdfc8534ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_58167a6dab92fee3a130d4795727e741 = $(`<div id="html_58167a6dab92fee3a130d4795727e741" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Neff West H 9-4-1H<br>     <b>Operator:</b> Diamondback E&p Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Trend Area<br>     <b>Depth (ft):</b> 12500<br>     <b>API:</b> 46143136     </div>`)[0];
+            popup_55d15efc2dd4ce33306805bdfc8534ba.setContent(html_58167a6dab92fee3a130d4795727e741);
+        
+
+        marker_8816f4013bc326f23cf8235c3e5221b0.bindPopup(popup_55d15efc2dd4ce33306805bdfc8534ba)
+        ;
+
+        
+    
+    
+            var marker_72381ec00c6f04370b3aaa490f192439 = L.marker(
+                [31.850116, -103.04197],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_cf2b4015b78559c46c0a69b30a32d8c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_72381ec00c6f04370b3aaa490f192439.setIcon(icon_cf2b4015b78559c46c0a69b30a32d8c1);
+        
+    
+        var popup_1b642eed734b41ccea71356ec83b031e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c10edb2c0d35a271b3f23bd9b39c8c7 = $(`<div id="html_0c10edb2c0d35a271b3f23bd9b39c8c7" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Ul 20 Pitchfork W 26-35b-2H<br>     <b>Operator:</b> Apache Corporation<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 16000<br>     <b>API:</b> 49535106     </div>`)[0];
+            popup_1b642eed734b41ccea71356ec83b031e.setContent(html_0c10edb2c0d35a271b3f23bd9b39c8c7);
+        
+
+        marker_72381ec00c6f04370b3aaa490f192439.bindPopup(popup_1b642eed734b41ccea71356ec83b031e)
+        ;
+
+        
+    
+    
+            var marker_51074d1325977575f03fbbaa66834bf6 = L.marker(
+                [28.35211, -98.567209],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_df88adabb10baf710c80c6003e9d873f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_51074d1325977575f03fbbaa66834bf6.setIcon(icon_df88adabb10baf710c80c6003e9d873f);
+        
+    
+        var popup_e3c17cb2e36f662a014166840655402b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d59153222319cef2487b94c0de055618 = $(`<div id="html_d59153222319cef2487b94c0de055618" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Forrest Wheeler 19-19H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 11730<br>     <b>API:</b> 31136912     </div>`)[0];
+            popup_e3c17cb2e36f662a014166840655402b.setContent(html_d59153222319cef2487b94c0de055618);
+        
+
+        marker_51074d1325977575f03fbbaa66834bf6.bindPopup(popup_e3c17cb2e36f662a014166840655402b)
+        ;
+
+        
+    
+    
+            var marker_08c556375f52c0f545a3f738adc367d3 = L.marker(
+                [28.352101, -98.567435],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_5cdc5c4e6f008d8291d78f71c62e6d58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_08c556375f52c0f545a3f738adc367d3.setIcon(icon_5cdc5c4e6f008d8291d78f71c62e6d58);
+        
+    
+        var popup_31b5f6c2e38e40ecacf819814548e0c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_988dcbcdaf614e69dbde609acdb72be8 = $(`<div id="html_988dcbcdaf614e69dbde609acdb72be8" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Forrest Wheeler 1-1H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 11852<br>     <b>API:</b> 31134727     </div>`)[0];
+            popup_31b5f6c2e38e40ecacf819814548e0c3.setContent(html_988dcbcdaf614e69dbde609acdb72be8);
+        
+
+        marker_08c556375f52c0f545a3f738adc367d3.bindPopup(popup_31b5f6c2e38e40ecacf819814548e0c3)
+        ;
+
+        
+    
+    
+            var marker_e9fabf64c23a5c7f07d005b4477705d7 = L.marker(
+                [28.352862, -98.567645],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_f0e6b0e4c500eaa8ba8e917b5c165524 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e9fabf64c23a5c7f07d005b4477705d7.setIcon(icon_f0e6b0e4c500eaa8ba8e917b5c165524);
+        
+    
+        var popup_41d9ba575cdfd07258a4896817021279 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8cb91f6ce651579f8a6843783530c402 = $(`<div id="html_8cb91f6ce651579f8a6843783530c402" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Forrest Wheeler 2-2H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 11833<br>     <b>API:</b> 31134834     </div>`)[0];
+            popup_41d9ba575cdfd07258a4896817021279.setContent(html_8cb91f6ce651579f8a6843783530c402);
+        
+
+        marker_e9fabf64c23a5c7f07d005b4477705d7.bindPopup(popup_41d9ba575cdfd07258a4896817021279)
+        ;
+
+        
+    
+    
+            var marker_d33f4255d8884febc8fab8aad7ff45ae = L.marker(
+                [28.352107, -98.56717],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_4d8958c52660bc04b7f94b1e10e40ff6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d33f4255d8884febc8fab8aad7ff45ae.setIcon(icon_4d8958c52660bc04b7f94b1e10e40ff6);
+        
+    
+        var popup_2e72dd8153e6f25ce01342ee4f87a64c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4dd6c71fffc35536d4bade7aee5ed983 = $(`<div id="html_4dd6c71fffc35536d4bade7aee5ed983" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Forrest Wheeler 32-32H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 12177<br>     <b>API:</b> 31137290     </div>`)[0];
+            popup_2e72dd8153e6f25ce01342ee4f87a64c.setContent(html_4dd6c71fffc35536d4bade7aee5ed983);
+        
+
+        marker_d33f4255d8884febc8fab8aad7ff45ae.bindPopup(popup_2e72dd8153e6f25ce01342ee4f87a64c)
+        ;
+
+        
+    
+    
+            var marker_8beca4049b9b9314c7ead750dc80a18f = L.marker(
+                [28.352202, -98.567266],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_eed5aac7368e5a3f60f7d1d47c24e529 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_8beca4049b9b9314c7ead750dc80a18f.setIcon(icon_eed5aac7368e5a3f60f7d1d47c24e529);
+        
+    
+        var popup_859acda54ce3cca64f45875e0290ac81 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4ff5653082c4c71c39604f4ef44b3dd3 = $(`<div id="html_4ff5653082c4c71c39604f4ef44b3dd3" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Forrest Wheeler 33-33H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 12181<br>     <b>API:</b> 31137291     </div>`)[0];
+            popup_859acda54ce3cca64f45875e0290ac81.setContent(html_4ff5653082c4c71c39604f4ef44b3dd3);
+        
+
+        marker_8beca4049b9b9314c7ead750dc80a18f.bindPopup(popup_859acda54ce3cca64f45875e0290ac81)
+        ;
+
+        
+    
+    
+            var marker_105dab07c0fdf39e807fcbfc3d6abc1e = L.marker(
+                [28.352124, -98.567308],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_aab45a23a2b7b1c1d3e5a7373167d709 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_105dab07c0fdf39e807fcbfc3d6abc1e.setIcon(icon_aab45a23a2b7b1c1d3e5a7373167d709);
+        
+    
+        var popup_379662c64b0e0cb2b76026fdffe0eb93 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_622b5dff21fb16dc593676cec845da27 = $(`<div id="html_622b5dff21fb16dc593676cec845da27" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Forrest Wheeler 35-35H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 12207<br>     <b>API:</b> 31137293     </div>`)[0];
+            popup_379662c64b0e0cb2b76026fdffe0eb93.setContent(html_622b5dff21fb16dc593676cec845da27);
+        
+
+        marker_105dab07c0fdf39e807fcbfc3d6abc1e.bindPopup(popup_379662c64b0e0cb2b76026fdffe0eb93)
+        ;
+
+        
+    
+    
+            var marker_56d1ff16e7c5ba8cf5e320df0f133d6d = L.marker(
+                [28.352118, -98.567639],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_4df7ad5a2b466b40342fd1dbd36d3646 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_56d1ff16e7c5ba8cf5e320df0f133d6d.setIcon(icon_4df7ad5a2b466b40342fd1dbd36d3646);
+        
+    
+        var popup_3d378f2374d0b75d49216f8e5bd05d97 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5da5e0d48ce8700854a9229c047ed00 = $(`<div id="html_d5da5e0d48ce8700854a9229c047ed00" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Forrest Wheeler 8-8H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 12238<br>     <b>API:</b> 31136271     </div>`)[0];
+            popup_3d378f2374d0b75d49216f8e5bd05d97.setContent(html_d5da5e0d48ce8700854a9229c047ed00);
+        
+
+        marker_56d1ff16e7c5ba8cf5e320df0f133d6d.bindPopup(popup_3d378f2374d0b75d49216f8e5bd05d97)
+        ;
+
+        
+    
+    
+            var marker_019971a401bf1004a7df0ad999f97420 = L.marker(
+                [28.352182, -98.567792],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_b93e6bb1c7042c37e4f7e5a272bfeb2f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_019971a401bf1004a7df0ad999f97420.setIcon(icon_b93e6bb1c7042c37e4f7e5a272bfeb2f);
+        
+    
+        var popup_902c4b2a105c21a107e7662dda279078 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06d764b3eff1066d371d38feb0806ab9 = $(`<div id="html_06d764b3eff1066d371d38feb0806ab9" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Forrest Wheeler 9-9H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 12199<br>     <b>API:</b> 31136273     </div>`)[0];
+            popup_902c4b2a105c21a107e7662dda279078.setContent(html_06d764b3eff1066d371d38feb0806ab9);
+        
+
+        marker_019971a401bf1004a7df0ad999f97420.bindPopup(popup_902c4b2a105c21a107e7662dda279078)
+        ;
+
+        
+    
+    
+            var marker_b8778b11fd1fd03eb480865b4307c485 = L.marker(
+                [32.742165, -101.94121],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_ac3aba5192d76743d11244e8a7257a8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b8778b11fd1fd03eb480865b4307c485.setIcon(icon_ac3aba5192d76743d11244e8a7257a8a);
+        
+    
+        var popup_2ab1e4d6412a2dbb34e094d14757b7ed = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1bfac4496ecf6e262c55fd370db07994 = $(`<div id="html_1bfac4496ecf6e262c55fd370db07994" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Nicole D-4H<br>     <b>Operator:</b> Hibernia Resources Iv, Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Trend Area<br>     <b>Depth (ft):</b> 9000<br>     <b>API:</b> 11534059     </div>`)[0];
+            popup_2ab1e4d6412a2dbb34e094d14757b7ed.setContent(html_1bfac4496ecf6e262c55fd370db07994);
+        
+
+        marker_b8778b11fd1fd03eb480865b4307c485.bindPopup(popup_2ab1e4d6412a2dbb34e094d14757b7ed)
+        ;
+
+        
+    
+    
+            var marker_a4bb3b5b67bdcffb52a5c0c7acf8d125 = L.marker(
+                [32.742952, -101.94128],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_22d8905abd3e4e083e7e3cb349c68714 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a4bb3b5b67bdcffb52a5c0c7acf8d125.setIcon(icon_22d8905abd3e4e083e7e3cb349c68714);
+        
+    
+        var popup_89ca5ed680a91068734593aac2403fb6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e0d149f145b40bf1a66aaf536d51683b = $(`<div id="html_e0d149f145b40bf1a66aaf536d51683b" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Nicole C-3H<br>     <b>Operator:</b> Hibernia Resources Iv, Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Trend Area<br>     <b>Depth (ft):</b> 9000<br>     <b>API:</b> 11534069     </div>`)[0];
+            popup_89ca5ed680a91068734593aac2403fb6.setContent(html_e0d149f145b40bf1a66aaf536d51683b);
+        
+
+        marker_a4bb3b5b67bdcffb52a5c0c7acf8d125.bindPopup(popup_89ca5ed680a91068734593aac2403fb6)
+        ;
+
+        
+    
+    
+            var marker_977a4643feb52cdd05e8af996bcfc00c = L.marker(
+                [31.323174, -103.69519],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_e4a1eb5682b6c1f4103ce17a4fa39c71 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_977a4643feb52cdd05e8af996bcfc00c.setIcon(icon_e4a1eb5682b6c1f4103ce17a4fa39c71);
+        
+    
+        var popup_c93278d74097a54301c0f7f225c68c68 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_29e2ba2a1474ec5f1d0924be615a3f6b = $(`<div id="html_29e2ba2a1474ec5f1d0924be615a3f6b" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Nice Marmot A-231H<br>     <b>Operator:</b> Civitas Permian Operating, Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 11292<br>     <b>API:</b> 38941725     </div>`)[0];
+            popup_c93278d74097a54301c0f7f225c68c68.setContent(html_29e2ba2a1474ec5f1d0924be615a3f6b);
+        
+
+        marker_977a4643feb52cdd05e8af996bcfc00c.bindPopup(popup_c93278d74097a54301c0f7f225c68c68)
+        ;
+
+        
+    
+    
+            var marker_f028189bc9dfd72da32f6870d20179d5 = L.marker(
+                [28.352965, -98.567435],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_7a465302e6807a702142c8b72d0f23ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f028189bc9dfd72da32f6870d20179d5.setIcon(icon_7a465302e6807a702142c8b72d0f23ec);
+        
+    
+        var popup_3de968114c93a0fc808c288728d63984 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_640ba5b389206f2c7cb1d035db389b56 = $(`<div id="html_640ba5b389206f2c7cb1d035db389b56" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Forrest Wheeler 3-3H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Eagle Ford-1<br>     <b>Depth (ft):</b> 11983<br>     <b>API:</b> 31135000     </div>`)[0];
+            popup_3de968114c93a0fc808c288728d63984.setContent(html_640ba5b389206f2c7cb1d035db389b56);
+        
+
+        marker_f028189bc9dfd72da32f6870d20179d5.bindPopup(popup_3de968114c93a0fc808c288728d63984)
+        ;
+
+        
+    
+    
+            var marker_f9df9c853cedf8c1b0460bb06bd7263a = L.marker(
+                [32.549197, -94.369133],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_71e28a92ca32301f437c3912293068ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f9df9c853cedf8c1b0460bb06bd7263a.setIcon(icon_71e28a92ca32301f437c3912293068ac);
+        
+    
+        var popup_2cfbfd2a09183c8a0a1b3fd818dca0e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_086241815cdb9c1e7edd63a1472f965f = $(`<div id="html_086241815cdb9c1e7edd63a1472f965f" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Bath GAS Unit B-12H<br>     <b>Operator:</b> Valence Operating Company<br>     <b>Basin:</b> East Texas Basin<br>     <b>Formation:</b> Haynesville Shale<br>     <b>Depth (ft):</b> 11500<br>     <b>API:</b> 20335741     </div>`)[0];
+            popup_2cfbfd2a09183c8a0a1b3fd818dca0e3.setContent(html_086241815cdb9c1e7edd63a1472f965f);
+        
+
+        marker_f9df9c853cedf8c1b0460bb06bd7263a.bindPopup(popup_2cfbfd2a09183c8a0a1b3fd818dca0e3)
+        ;
+
+        
+    
+    
+            var marker_1c58136891014988ec71ba5c07b76f44 = L.marker(
+                [31.850185, -103.04167],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_718b4a14feb4c5f0aeda9fab7330ac0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_1c58136891014988ec71ba5c07b76f44.setIcon(icon_718b4a14feb4c5f0aeda9fab7330ac0d);
+        
+    
+        var popup_1a24343a7cf3f0fc82f41f467bb7a29a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f7c4b784ea50ef548b06b02d1d6310a3 = $(`<div id="html_f7c4b784ea50ef548b06b02d1d6310a3" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Ul 20 Pitchfork W 26-35c-3AH<br>     <b>Operator:</b> Apache Corporation<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 16000<br>     <b>API:</b> 49535107     </div>`)[0];
+            popup_1a24343a7cf3f0fc82f41f467bb7a29a.setContent(html_f7c4b784ea50ef548b06b02d1d6310a3);
+        
+
+        marker_1c58136891014988ec71ba5c07b76f44.bindPopup(popup_1a24343a7cf3f0fc82f41f467bb7a29a)
+        ;
+
+        
+    
+    
+            var marker_140754607416767a665b86f5d28411a5 = L.marker(
+                [31.323128, -103.69211],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_2e24d6cc21d89ede2b9db1d796d39b04 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_140754607416767a665b86f5d28411a5.setIcon(icon_2e24d6cc21d89ede2b9db1d796d39b04);
+        
+    
+        var popup_ce90a4d8a7b027a4c0958ec9d9b1412d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_20a205c3c576cd8d696581f8e8643171 = $(`<div id="html_20a205c3c576cd8d696581f8e8643171" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Nice Marmot B-131H<br>     <b>Operator:</b> Civitas Permian Operating, Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 10369<br>     <b>API:</b> 38941726     </div>`)[0];
+            popup_ce90a4d8a7b027a4c0958ec9d9b1412d.setContent(html_20a205c3c576cd8d696581f8e8643171);
+        
+
+        marker_140754607416767a665b86f5d28411a5.bindPopup(popup_ce90a4d8a7b027a4c0958ec9d9b1412d)
+        ;
+
+        
+    
+    
+            var marker_ab65b63d5cf1c2e5f4539fedf4a19080 = L.marker(
+                [31.323299, -103.69671],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_49804cf8c09c63e8f58e2a52426f2f05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ab65b63d5cf1c2e5f4539fedf4a19080.setIcon(icon_49804cf8c09c63e8f58e2a52426f2f05);
+        
+    
+        var popup_8de10062bb63670a6f30519cdcc53601 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_964ef4c601e2bceb9b19ed65d7bdcf29 = $(`<div id="html_964ef4c601e2bceb9b19ed65d7bdcf29" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Mcgary 16-2H<br>     <b>Operator:</b> Upcurve Energy, Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38939893     </div>`)[0];
+            popup_8de10062bb63670a6f30519cdcc53601.setContent(html_964ef4c601e2bceb9b19ed65d7bdcf29);
+        
+
+        marker_ab65b63d5cf1c2e5f4539fedf4a19080.bindPopup(popup_8de10062bb63670a6f30519cdcc53601)
+        ;
+
+        
+    
+    
+            var marker_1473d12ee6ee6a24886442ad92f7aaad = L.marker(
+                [31.323119, -103.69186],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_52a1b9770c6daed95c02bfc4a5badabf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_1473d12ee6ee6a24886442ad92f7aaad.setIcon(icon_52a1b9770c6daed95c02bfc4a5badabf);
+        
+    
+        var popup_53133449640781a5220abbe4e5181271 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33a4e156532a5b01cbe938587baf19d8 = $(`<div id="html_33a4e156532a5b01cbe938587baf19d8" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> State Pogo Stick 57-t1-45x4 Ba-W201H<br>     <b>Operator:</b> Bpx Operating Company<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 12000<br>     <b>API:</b> 38941104     </div>`)[0];
+            popup_53133449640781a5220abbe4e5181271.setContent(html_33a4e156532a5b01cbe938587baf19d8);
+        
+
+        marker_1473d12ee6ee6a24886442ad92f7aaad.bindPopup(popup_53133449640781a5220abbe4e5181271)
+        ;
+
+        
+    
+    
+            var marker_c2548978797acf8db0940989ddeabb0e = L.marker(
+                [28.797743, -96.968323],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_80789610f2be5df95efa381dc22214b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c2548978797acf8db0940989ddeabb0e.setIcon(icon_80789610f2be5df95efa381dc22214b5);
+        
+    
+        var popup_4b38e94dc40da84a7b1d9d525551e90f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eb2c28c67200c95ff4885cee8af43ac5 = $(`<div id="html_eb2c28c67200c95ff4885cee8af43ac5" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Willemin-1<br>     <b>Operator:</b> Aurora Resources Corporation<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> 4360<br>     <b>Depth (ft):</b> 5000<br>     <b>API:</b> 46934527     </div>`)[0];
+            popup_4b38e94dc40da84a7b1d9d525551e90f.setContent(html_eb2c28c67200c95ff4885cee8af43ac5);
+        
+
+        marker_c2548978797acf8db0940989ddeabb0e.bindPopup(popup_4b38e94dc40da84a7b1d9d525551e90f)
+        ;
+
+        
+    
+    
+            var marker_9b2747fccaafb17e15d5134db6fae70b = L.marker(
+                [26.561499, -98.738478],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_e48e77fe63db388cdacc5680fd517ba6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_9b2747fccaafb17e15d5134db6fae70b.setIcon(icon_e48e77fe63db388cdacc5680fd517ba6);
+        
+    
+        var popup_b7657365902609df49ea9654b9dc6f41 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8e585dea22f0bc8d50fcb3c0425a074 = $(`<div id="html_e8e585dea22f0bc8d50fcb3c0425a074" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Hall, J. F. State-30<br>     <b>Operator:</b> Killam Oil Co., Ltd.<br>     <b>Basin:</b> Western Gulf Basin<br>     <b>Formation:</b> Vicksburg Cons.<br>     <b>Depth (ft):</b> 6690<br>     <b>API:</b> 42734791     </div>`)[0];
+            popup_b7657365902609df49ea9654b9dc6f41.setContent(html_e8e585dea22f0bc8d50fcb3c0425a074);
+        
+
+        marker_9b2747fccaafb17e15d5134db6fae70b.bindPopup(popup_b7657365902609df49ea9654b9dc6f41)
+        ;
+
+        
+    
+    
+            var marker_02823e295e6a84c5ec555e920f9c051f = L.marker(
+                [31.323168, -103.69188],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_dbe6fdb3bcbb2890e2f48aac81b66dcd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_02823e295e6a84c5ec555e920f9c051f.setIcon(icon_dbe6fdb3bcbb2890e2f48aac81b66dcd);
+        
+    
+        var popup_08c00f9ae8e4e822f5e3457997305f2a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b96dfc2fd0a9020b71f39113fe6bf666 = $(`<div id="html_b96dfc2fd0a9020b71f39113fe6bf666" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 A-11H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941728     </div>`)[0];
+            popup_08c00f9ae8e4e822f5e3457997305f2a.setContent(html_b96dfc2fd0a9020b71f39113fe6bf666);
+        
+
+        marker_02823e295e6a84c5ec555e920f9c051f.bindPopup(popup_08c00f9ae8e4e822f5e3457997305f2a)
+        ;
+
+        
+    
+    
+            var marker_4e3bf3210783f37ef1eb602f5a3d1e82 = L.marker(
+                [31.323135, -103.69867],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_362ce70ded3168131ee6fc5f502945e6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4e3bf3210783f37ef1eb602f5a3d1e82.setIcon(icon_362ce70ded3168131ee6fc5f502945e6);
+        
+    
+        var popup_3267d972272b10c9b77e2724e14649b9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f3ad0c18c09de27230891b1ea3d8697b = $(`<div id="html_f3ad0c18c09de27230891b1ea3d8697b" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 B-21H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941729     </div>`)[0];
+            popup_3267d972272b10c9b77e2724e14649b9.setContent(html_f3ad0c18c09de27230891b1ea3d8697b);
+        
+
+        marker_4e3bf3210783f37ef1eb602f5a3d1e82.bindPopup(popup_3267d972272b10c9b77e2724e14649b9)
+        ;
+
+        
+    
+    
+            var marker_f2aa9bf34d5bf4537c6d51ca69564f9a = L.marker(
+                [31.849106, -103.58796],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_151192293e2bb856ebbae039938002d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f2aa9bf34d5bf4537c6d51ca69564f9a.setIcon(icon_151192293e2bb856ebbae039938002d7);
+        
+    
+        var popup_2e7b0d315b96ed5538e5755343d3ca8b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d82e820462a4882978c121b8649e775 = $(`<div id="html_8d82e820462a4882978c121b8649e775" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Pbar Swd-5<br>     <b>Operator:</b> Pilot Water Gath Delaware Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 8000<br>     <b>API:</b> 30134743     </div>`)[0];
+            popup_2e7b0d315b96ed5538e5755343d3ca8b.setContent(html_8d82e820462a4882978c121b8649e775);
+        
+
+        marker_f2aa9bf34d5bf4537c6d51ca69564f9a.bindPopup(popup_2e7b0d315b96ed5538e5755343d3ca8b)
+        ;
+
+        
+    
+    
+            var marker_7b10925b0da98949a139a5e373eb877f = L.marker(
+                [31.32316, -103.69269],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_dae3c87d82f664b2f2efff4553c11a5d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_7b10925b0da98949a139a5e373eb877f.setIcon(icon_dae3c87d82f664b2f2efff4553c11a5d);
+        
+    
+        var popup_302b3bde037c2970b05786281c00e92d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f63020f78f1d10b757ebb901eb0c791 = $(`<div id="html_7f63020f78f1d10b757ebb901eb0c791" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 C-12H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941730     </div>`)[0];
+            popup_302b3bde037c2970b05786281c00e92d.setContent(html_7f63020f78f1d10b757ebb901eb0c791);
+        
+
+        marker_7b10925b0da98949a139a5e373eb877f.bindPopup(popup_302b3bde037c2970b05786281c00e92d)
+        ;
+
+        
+    
+    
+            var marker_de7e2715de0576841cc13b567b3f4a15 = L.marker(
+                [31.323536, -103.6963],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_a89b1c5867e408b6296f3c0c2d0d86c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_de7e2715de0576841cc13b567b3f4a15.setIcon(icon_a89b1c5867e408b6296f3c0c2d0d86c7);
+        
+    
+        var popup_aa07f7c4941531651b2f5e21926d8c0c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e5600458cfee299d88bbdfd72537d94 = $(`<div id="html_3e5600458cfee299d88bbdfd72537d94" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 D-13H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941731     </div>`)[0];
+            popup_aa07f7c4941531651b2f5e21926d8c0c.setContent(html_3e5600458cfee299d88bbdfd72537d94);
+        
+
+        marker_de7e2715de0576841cc13b567b3f4a15.bindPopup(popup_aa07f7c4941531651b2f5e21926d8c0c)
+        ;
+
+        
+    
+    
+            var marker_26237ac63d20887e7ea858c717091b5f = L.marker(
+                [31.323196, -103.69834],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_ffd5ed00d26153c3324095f34c4fd3c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_26237ac63d20887e7ea858c717091b5f.setIcon(icon_ffd5ed00d26153c3324095f34c4fd3c5);
+        
+    
+        var popup_9c940828e71879732ca57afbf72dd615 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6354640568546abacb451233af43f6fc = $(`<div id="html_6354640568546abacb451233af43f6fc" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 E-14H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941732     </div>`)[0];
+            popup_9c940828e71879732ca57afbf72dd615.setContent(html_6354640568546abacb451233af43f6fc);
+        
+
+        marker_26237ac63d20887e7ea858c717091b5f.bindPopup(popup_9c940828e71879732ca57afbf72dd615)
+        ;
+
+        
+    
+    
+            var marker_b4bd7ef422f766c4f274c6a40465a746 = L.marker(
+                [31.323898, -103.69161],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_51d833fe44c5a5473ea9cd95f2eced00 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b4bd7ef422f766c4f274c6a40465a746.setIcon(icon_51d833fe44c5a5473ea9cd95f2eced00);
+        
+    
+        var popup_872f1d8200bdefb3c6b26fa227f96306 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56b29c4147809570bea170477a443322 = $(`<div id="html_56b29c4147809570bea170477a443322" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 F-22H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941733     </div>`)[0];
+            popup_872f1d8200bdefb3c6b26fa227f96306.setContent(html_56b29c4147809570bea170477a443322);
+        
+
+        marker_b4bd7ef422f766c4f274c6a40465a746.bindPopup(popup_872f1d8200bdefb3c6b26fa227f96306)
+        ;
+
+        
+    
+    
+            var marker_6031c37e07de6e09b7bfe1f6552bce55 = L.marker(
+                [31.323292, -103.69176],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_3f31b2c9f2addefeb7a97c1b2da9989f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6031c37e07de6e09b7bfe1f6552bce55.setIcon(icon_3f31b2c9f2addefeb7a97c1b2da9989f);
+        
+    
+        var popup_2d3bd57fbbf4d2f0de7abbaf21393ca4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e40f3690049bb8aebd75c03967983a9 = $(`<div id="html_8e40f3690049bb8aebd75c03967983a9" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 G-15H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941734     </div>`)[0];
+            popup_2d3bd57fbbf4d2f0de7abbaf21393ca4.setContent(html_8e40f3690049bb8aebd75c03967983a9);
+        
+
+        marker_6031c37e07de6e09b7bfe1f6552bce55.bindPopup(popup_2d3bd57fbbf4d2f0de7abbaf21393ca4)
+        ;
+
+        
+    
+    
+            var marker_307bb6e9ce6dcd8f0e3428aa05bc1512 = L.marker(
+                [31.323194, -103.69991],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_ca7e426db51fc51c5e5a2e5d96d8fff9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_307bb6e9ce6dcd8f0e3428aa05bc1512.setIcon(icon_ca7e426db51fc51c5e5a2e5d96d8fff9);
+        
+    
+        var popup_8146c3a294171e39bc2aaf2756048156 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74cd598453c385ba6a512f461b9f00ac = $(`<div id="html_74cd598453c385ba6a512f461b9f00ac" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 H-23H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941735     </div>`)[0];
+            popup_8146c3a294171e39bc2aaf2756048156.setContent(html_74cd598453c385ba6a512f461b9f00ac);
+        
+
+        marker_307bb6e9ce6dcd8f0e3428aa05bc1512.bindPopup(popup_8146c3a294171e39bc2aaf2756048156)
+        ;
+
+        
+    
+    
+            var marker_2334948f82d0a27391e62221b5d05331 = L.marker(
+                [31.323108, -103.69361],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_8c43f328d8b9397da338784ab0952113 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2334948f82d0a27391e62221b5d05331.setIcon(icon_8c43f328d8b9397da338784ab0952113);
+        
+    
+        var popup_ac8cc64eaac9404298f337dca6696f36 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d36746e8e839d2416715b1c03f879f46 = $(`<div id="html_d36746e8e839d2416715b1c03f879f46" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 I-16H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941736     </div>`)[0];
+            popup_ac8cc64eaac9404298f337dca6696f36.setContent(html_d36746e8e839d2416715b1c03f879f46);
+        
+
+        marker_2334948f82d0a27391e62221b5d05331.bindPopup(popup_ac8cc64eaac9404298f337dca6696f36)
+        ;
+
+        
+    
+    
+            var marker_b15ce12d9265d8801d3645b9debfdc4d = L.marker(
+                [31.32395, -103.6958],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_90191be69be48ff5c4474d08e0332b40 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b15ce12d9265d8801d3645b9debfdc4d.setIcon(icon_90191be69be48ff5c4474d08e0332b40);
+        
+    
+        var popup_3372ba7704cd714b2b7172fb83d7b59c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e793a87e1d1ee9e91654c6f846e16fc = $(`<div id="html_2e793a87e1d1ee9e91654c6f846e16fc" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 J-17H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941737     </div>`)[0];
+            popup_3372ba7704cd714b2b7172fb83d7b59c.setContent(html_2e793a87e1d1ee9e91654c6f846e16fc);
+        
+
+        marker_b15ce12d9265d8801d3645b9debfdc4d.bindPopup(popup_3372ba7704cd714b2b7172fb83d7b59c)
+        ;
+
+        
+    
+    
+            var marker_3c4dd6eae0ee66df15c633536db0eaca = L.marker(
+                [31.323137, -103.69138],
+                {}
+            ).addTo(marker_cluster_4c79149f0667f220e1f02d542106e5eb);
+        
+    
+            var icon_d4db64f36a279acc335598d258437f95 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "oil", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3c4dd6eae0ee66df15c633536db0eaca.setIcon(icon_d4db64f36a279acc335598d258437f95);
+        
+    
+        var popup_7d958287e0aa1a8535fd97dfffd95a8c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4062903ba7ca9504cca33745ffb3d998 = $(`<div id="html_4062903ba7ca9504cca33745ffb3d998" style="width: 100.0%; height: 100.0%;">     <b>Well Name:</b> Golem 56-2-43-3 K-18H<br>     <b>Operator:</b> Anadarko E&p Onshore Llc<br>     <b>Basin:</b> Permian Basin<br>     <b>Formation:</b> Wolfcamp<br>     <b>Depth (ft):</b> 13000<br>     <b>API:</b> 38941738     </div>`)[0];
+            popup_7d958287e0aa1a8535fd97dfffd95a8c.setContent(html_4062903ba7ca9504cca33745ffb3d998);
+        
+
+        marker_3c4dd6eae0ee66df15c633536db0eaca.bindPopup(popup_7d958287e0aa1a8535fd97dfffd95a8c)
+        ;
+
+        
+    
+</script>
+</html>
